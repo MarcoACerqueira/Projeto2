@@ -1,0 +1,335 @@
+:root{
+    /* aqui no root aberto estou declarando as variáveis do projeto */
+    --cor_primiria:#101417;
+    --cor_contraste:#B91F33;
+    --gray-light: #e1e1e1e1;
+    --gray-medium: #666666;
+}
+
+*{
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase; /*coloca o texto em maiúscula*/
+}
+
+
+html{
+    scroll-behavior: smooth; 
+    /* faz a nevagação ficar suave quando acionado o botão de link */
+}
+
+body{
+    /* font-family: 'Teko', sans-serif; coloquei para todos mais acima*/
+    /* aqui colei a familia da font que copiei do site fonts.google.com */
+    /* margin: 0;  -  não precisa pois já está padronizado mais abaixo*/
+    /* essa margin é para tirar os espaços do h1 */
+    background-color: var(--cor_primiria);
+    /* text-transform: uppercase; coloca o texto em maiúscula - coloquei para todos mais acima */
+}
+
+h1,h2,h3,h4,h5,h6,p,body{
+    margin: 0;
+}
+
+img{
+    display: block; /*retirando o espaço que fica abaixo das imagens, pois a imagem é considerado como linha e na linha tem espaço abaixo como se fosse um texto*/
+}
+
+h2,h3{
+    color:white;
+    font-size: 40px;
+    /*fonte de titulos já vem com negrito e não precisa colocar bold*/
+    font-weight: 700;
+}
+
+h3{
+    font-size: 32px;
+}
+
+p{
+    color: var(--gray-light);
+    font-size: 18px;
+    line-height:120%; /*espeçamento entre as linhas dos parágrafos*/
+}
+
+
+.header{
+    /* Se fosse id e não class deveria formatar com #header */
+    width: 100%; /*largura*/
+    height: auto; /*altura*/
+    background-color: rgba(0, 0, 0, 0.5); /*colocando transparente*/
+    backdrop-filter: blur(5px); /*serve para deixar embassado a transperência*/
+    padding: 16px 0;
+    position: fixed; /*fixando o head*/
+    /* right: 0; */
+    /* bottom: 0; */  /* caso eu quisesse que ficasse em baixo!*/
+    z-index: 1; /*para garantir que o cabeçalho fica acima de todos.  Quanto menor o Z-index prioriza quem fica acima primeiro*/
+    
+    
+}
+
+.container{
+    width: 1140px; /*determinar sempre a largura máxima com px*/
+    margin: 0 auto; /*centralizando 0 em cima e em baixo e auto nas laterais*/
+}
+
+.header .container{ /*Formatando o container que está DENTRO do header */
+    display: flex; /* sempre para chamar os elementos flex*/
+    justify-content: space-between; /* alinhando no eixo x*/
+    align-items: center; /* alinhando no eixo y*/
+}
+
+.menu a{
+    margin-left: 110px; /*colocando espaçamento entre os links*/
+    color:white;
+    font-size: 18px;
+    font-weight:bold;
+    text-decoration: none;
+}
+
+.menu a:hover{ /*ao passar o mouse aplique a cor contraste no menu*/
+    color: var(--cor_contraste)
+}
+
+.hero-section{
+    width: 100%; /*ocupando 100% da largura*/
+    height: 650px; /*tamanho ideal para 1ª dobra*/
+    background-image: url(../img/background.jpg); /*chamando a imagem*/
+    background-size: cover; /* usado para que a imagem cubra toda a div*/
+
+    display:flex;
+    align-items: center; /*centralizando o texto da hero section*/
+}
+
+.hero-section .container {  
+    position: relative; /* posição em relação a ele mesmo*/
+    top: 52px;
+}
+
+
+.hero-section h1{
+    max-width: 946px;
+    font-size: 96px;
+    color: var(--gray-light);
+    line-height: 90%;
+}
+
+.hero-section p{
+    margin:20px 0;
+    max-width: 655px;
+    font-size: 24px;
+    color: var(--gray-light);
+    line-height: 120%;
+    font-weight: regular;
+}
+
+.hero-section a{
+    font-size: 18px;
+    color: white;
+    background-color: var(--cor_contraste);
+    font-weight: regular;  
+    text-decoration: none; /*retirando sublinhado*/
+    padding: 13px 44px 9px 44px; /* em cima - direita - embaixo - esquerda*/
+    margin: 20px 0;
+    border-radius: 3px;
+    display: inline-block; /* para o paragrafo empurrar o botão que se comporta como bloco*/  
+}
+
+.hero-section a:hover{
+    color: black
+}
+
+.nossa-academia{
+    width: 1140px;
+    height: 377px;
+    line-height: auto;
+}
+
+.nossa-academia {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px; /*margin abaixo*/
+    column-gap: 24px; /*só funciona com display flex. Serve para separar com espaço entre as colunas*/
+}
+
+.conteudo-academia p{
+    padding-bottom: 20px;
+}
+
+.faca-parte{
+    background-color: VAR(--gray-light);
+    padding: 37px 0;
+}
+
+.faca-parte .container{
+    position: relative;
+}
+
+.faca-parte h2{
+    color: #222222;
+}
+
+.faca-parte p{
+    color: var(--gray-medium);
+    max-width: 850px;
+}
+
+.imagem-atleta{
+    position: absolute; /*fixando a imagem (considera position relative no elemento pai faca-parte)*/
+    /*posição em relação ao elemento pai (desde que ele tenha position, caso contrário, o body será usado como referência*/
+    right: 0; /*direita*/
+    bottom: -37px; /*abaixo considerando valor do padding*/
+}
+
+/*
+    Position relative:
+    Posição em relação a próprio elemento (ele mesmo)
+
+    Position fixed e absolute:
+    Posição em relação ao elemento Pai (Desde que o elemento pai tenha position), caso contrário, o body será a referência.
+
+    Position fixed:
+    Posição fixa em relação ao body
+
+*/
+
+.planos{
+    /* width: 100%;  100% da tela (detalhe: já consta acima = redundante) */
+    /* height: auto; se ajustando a tela (detalhe: já consta acima = redundante) */
+    background-image: url(../img/bg-planos.jpg);
+    background-size: cover;
+    text-align: center;
+    padding: 60px 0; /*60 acima e embaixo e zero nas laterais*/
+    position: relative;
+}
+
+.flex-cards{
+    display: flex;
+    /* color: var(--gray-light); */
+    /* justify-content: space-between; desta forma iria distribuir o espaço entre e teria que definir tamanho do card mais abaixo */
+    column-gap: 24px; /* definindo coluna para distribuir o espaço entre os cards - desta forma não precisa definir espaço do card*/
+}
+
+.card-plano{
+    border: solid 1px var(--gray-light);
+    margin-top: 30px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.30); /*opacidade (transparência) de fundo no card*/
+    border-radius: 3px; /*arredondamento da borda do card*/
+    transition: 0.5s;
+}
+
+.card-plano:hover{
+    background-color: rgba(0, 0, 0, 0.7); /*ao mover mouse ele colocou umk pouco de transparência*/
+    transform: scale(1.05); /*ao mover mouse ele aumentou o card*/
+}
+
+.card-plano span{
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--gray-light);
+    display: block; /*necessario pois o span se comporta como linha/texto*/
+    margin-top: 16px;
+}
+
+.card-plano ul{
+    text-align: left; /*retirando o centralizado do card-plano*/
+    padding-left: 0;
+    list-style: inside; /*alinhando a lista e seu marcador na posição zero*/
+    color: var(--gray-light);
+    font-size: 18px;
+    line-height: 120%; /*espaçamento entre as letras*/
+}
+
+.card-destaque{
+    border: solid 3px var(--cor_contraste);
+}
+
+.btn{
+    border: solid 2px var(--cor_contraste);
+    display: block;
+    color: white;
+    text-decoration: none; /*retirando sublinhado*/
+    font-size: 18px;
+    padding: 10px 45px 7px 45px;
+    border-radius: 3px; /*arredondamento dos botões*/
+    transition: 0.5s;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: var(--cor_primiria);
+    border: solid 2px var(--gray-light);
+}
+
+.btn-destaque{
+    background-color: var(--cor_contraste);
+}
+
+.card-plano .span-destaque{
+    color: #E0E34C;
+}
+
+.fale-conosco{
+    padding: 100px 0; /*100 em cima e embaixo e zero dos lados*/
+    display: flex; /*colocando forma do lado do mapa*/
+    justify-content: space-between; /**/
+}
+
+.conteudo-form{
+    width: 558px; /*largura*/
+    resize: none; /*para não deixar a caixa aumentar a area = desabilita o redimensionamento da caixa textaarea*/
+}
+
+.conteudo-form form{
+    margin-top: 21px;
+}
+
+.conteudo-form input, .conteudo-form textarea{
+    display: block; /*colocando as caixas do form um em baixo do outro*/
+    width: 100%; /*fazendo as caixas ocuparem todo espaço da div*/
+    background-color: transparent; /*deixando o fundo da caixa transparente*/
+    padding: 10px 10px 7px 10px; /*sentido horário começando pelo topo*/
+    margin-bottom: 10px;
+    border: solid 1px var(--gray-light);
+    color: var(--gray-light);
+    border-radius: 3px;
+    font-size: 18px;
+
+    /*quando tem margin e padding = box-sizing corrige não deixando expandir/modificar as dimensões dos elementos */
+    box-sizing: border-box;
+}
+
+.conteudo-form textarea{
+    height: 140px;
+}
+
+.footer{
+    background-color: var(--cor_contraste);
+    color: white;
+    text-align: center;
+    padding: 14px 194px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.midias{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 103px;
+    column-gap: 10px;
+}
+
+
+#academia{
+    scroll-margin-top: 160px;
+}
+
+#planos{
+    scroll-margin-top: 40px;
+}
+
+#contatos{
+    scroll-margin-top: 30px;
+}
