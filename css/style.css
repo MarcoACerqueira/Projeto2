@@ -139,8 +139,8 @@ p{
 }
 
 .nossa-academia{
-    width: 1140px;
-    height: 377px;
+    /*width: 1140px;*/
+    /*height: 377px;*/
     line-height: auto;
 }
 
@@ -317,7 +317,7 @@ p{
 .midias{
     display: flex;
     justify-content: center;
-    margin-bottom: 103px;
+    /* margin-bottom: 50px; */
     column-gap: 10px;
 }
 
@@ -333,3 +333,162 @@ p{
 #contatos{
     scroll-margin-top: 30px;
 }
+
+
+
+
+/* PARTE RESPONSIVO */
+
+@media (max-width: 1140px){
+ 
+    .container{
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box;  /*faz com que o PAD não acrescente nas dimensões*/
+    }
+
+    .conteudo-faca-parte{
+        width: calc(100% - 195px);
+    }
+
+    .fale-conosco{
+        flex-direction: column;
+        row-gap: 24px;
+        align-items: center;
+    }
+
+    .conteudo-form, .mapa, iframe{
+        width: 100%;
+    }
+
+    .footer{
+        padding: 14px 14px;
+    }
+
+}
+
+@media (max-width:950px){
+
+    h2{
+        font-size: 32px; /*reduzindo a fonte a partir de 950px*/
+    }
+
+    h3{
+        font-size: 24px;
+    }
+
+    .menu{
+        /* display: none; */
+        transform: translateX(-100%); /*desabilitado do display porque o transform só funciona sem display*/
+        /* aqui com -100% deixou o menu fora da página do site (a esquerda) */
+        transition: 0.8s;
+        background-color: var(--cor_primiria);
+        position: fixed;
+        top: 100px;
+        left: 0;
+        width: 75%;
+        height: 100vh /*para ocupar toda tela usa vh*/
+    }
+
+    .menu-open{
+        /* display: block; */
+        /* Classe acionada pelo Java Script */
+        transform: translate(0); /*retornando o menu e desabilitado o display block para o transform funcionar*/
+    }
+
+    .menu-closed{
+        transform: translatex(-100%);
+    }
+
+    .menu a{
+        display: block;
+        margin: 0;
+        padding: 20px 20px;
+        /* background-color: blue; */
+        /* text-align: center; */
+    }
+
+    .bar{ /*FORMATANDO A BARRA DO MENU RESPONSIVO.  APARECE ABAIXO DE 950PX*/
+        width: 40px; /*largura da barrinha*/
+        height: 3px; /*altura da barrinha*/
+        margin-bottom: 3px; /*espaçamento entre as barrinhas*/
+        background-color: white;
+        border-radius: 3px; /*arredondamento da ponta da borda*/
+        transition: 0.8s; /*MARCO*/
+    }
+
+    .x .bar:first-child{ /*primeiro item*/
+        transform: rotate(45deg) translate(8px, 2px); /*rotacionando a primeira barra*/
+    }
+
+    .x .bar:last-child{ /*ultimo item*/
+        transform: rotate(-45deg) translate(6px, 0); /*rotacionando a segunda barra*/
+    }
+
+    .x .bar:nth-child(2){ /*definindo conforme a posição do item*/
+        opacity: 0;
+        transform: translate(-150px);
+    }
+
+    .hero-section{
+        height: 520px;
+    }
+
+    .hero-section h1{
+        font-size: 36px; /*reduzindo fonte para se ajustar abaixo de 950px*/
+    }
+    
+    .hero-section p{
+        font-size: 20px;
+    }
+
+    .nossa-academia {
+        /* display: flex; */
+        flex-direction: column; /*retornando para linha onde o texto ficará abaixo e não mais ao lado*/
+        /* neste momento o eixo foi alterado (justify-content e align itens se invertem e colum gap não funciona */
+    }
+
+    .imagem-aluno img{
+        max-width: 100%; /*ele ficará no maximo do tamanho dela mesma 558px*/
+    }
+
+    .flex-cards{
+        flex-direction: column; /*para os cards ficarem um em baixo do outro a partir de 950px*/
+        align-items: center; /*deixando os cards centralizados*/
+        row-gap: 24px; /*colocando espaço entre os cards*/
+    }
+    
+    .card-plano{    
+    max-width: 400px;
+    }
+
+    .fale-conosco{
+        flex-direction: column;
+        row-gap: 24px;
+        align-items: center;
+    }
+
+    .conteudo-form, .mapa, iframe{
+        width: 100%;
+    }
+
+}   
+
+@media (max-width:560px) {
+    .imagem-atleta{
+        display: none; /*sumindo a imagem a partir de 560pc*/
+    }
+
+    .conteudo-faca-parte{
+        width: 100%; 
+    }    
+}
+
+
+.mc p{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+

@@ -9,67 +9,71 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Minha Academia no Projeto2</title>
 
-        <link rel="stylesheet" href="css/style.css">
-        <!-- aqui foi chamado e integrado o css ao html -->
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
         <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&display=swap" rel="stylesheet">  
         <!-- Aqui foi copiado do fonts.google.com a fonte do projeto -->
+
+        <link rel="stylesheet" href="css/style.css">
+        <!-- aqui foi chamado e integrado o css ao html -->
+        <link rel="stylesheet" href="css/aos.css">
+        <!-- aqui foi chamado e integrado o Java Script ao html -->
+
 </head>
    
 
-        <body>
+    <body>
         
-            <div class="header"> <!--header utilizado para definir página home -->
-            <!-- aqui criei a div do cabeçalho com class (não id) class repete -->
+        <div class="header"> <!--header utilizado para definir página home -->
+        <!-- aqui criei a div do cabeçalho com class (não id) class repete -->
                
-                <div class = "container">      
-                <!-- Aqui defini div com contenção lateral da página -->
-                    <div class="logo"> 
-                        <img src="img/logo.svg" alt="">
+            <div class = "container">      
+            <!-- Aqui defini div com contenção lateral da página -->
+                <div class="logo"> 
+                    <img src="img/logo.svg" alt="">
                     
-                    </div>
-                    <p> Desenvolvido por Marco Cerqueira</p> 
-                    <div class="menu"> 
-
-                        <a href="#"> Início </a>
-                        <a href="#academia"> Nossa Academia </a>
-                        <a href="#planos"> Planos </a>
-                        <a href="#contatos"> Fale Conosco </a>
-                        
-                    </div>
-               
                 </div>
+                    
+                <div class="btn-menu"> <!--/* BOTÃO BARRA DO MENU DO RESPONSIVO*/-->
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                    
+                <!-- <p> Desenvolvido por Marco Cerqueira</p>  -->
+                <div class="menu"> 
+                    <a href="#"> Início </a>
+                    <a href="#academia"> Nossa Academia </a>
+                    <a href="#planos"> Planos </a>
+                    <a href="#contatos"> Fale Conosco </a>                   
+                </div>
+               
+            </div>
                 
-            </div>    
+        </div>    
                 
                 
-    <!-- Essa div está fora do header -->
+        <!-- Essa div está fora do header -->
         <div class="hero-section"> 
 
             <div class="container">
-                
-                <h1> Lorem ipsum dolor sit amet, consectetur </h1>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla consectetur ligula ut ornare. Pellentesque vulputate dictum nibh eget tempus. Integer accumsan tellus sed massa faucibus, in eleifend lorem placerat. </p>
-                <a href="#"> Lorem Ipsum </a>
-
+                <h1 data-aos="fade-right"> Lorem ipsum dolor sit amet, consectetur </h1>
+                <p data-aos="fade-right" data-aos-delay="300"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla consectetur ligula ut ornare. Pellentesque vulputate dictum nibh eget tempus. Integer accumsan tellus sed massa faucibus, in eleifend lorem placerat. </p>
+                <a data-aos="fade-right" data-aos-delay="1000" href="#"> Lorem Ipsum </a>
             </div>
 
         </div>
 
 
         <div class = "container nossa-academia" id="academia">
-            <div class = "imagem-aluno">
+            <div class = "imagem-aluno" data-aos="fade-right">
                 <img src="img/aluno.jpg" alt="">
             </div>
 
-            <div class = "conteudo-academia">
+            <div class = "conteudo-academia" data-aos="fade-up" data-aos-delay="300">
                 <h2> Nossa Academia </h2>
-
                 <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu, ac lacinia  lorem pellentesque id. Morbi tincidunt malesuada vestibulum. Praesent at diam eros. Integer tempus vitae urna et rhoncus. Proin congue turpis ac felis tincidunt congue. Duis tincidunt dui eu malesuada convallis. In vel est feugiat, interdum ante iaculis, ultricies turpis. 
                 </p> 
-
                 <p>quis pharetra ligula, sit amet porttitor odio.
                 Sed nec quam euismod, interdum justo quis, efficitur eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla condimentum, nulla nec tempor euismod, purus elit accumsan erat, non luctus purus arcu ac sapien. Phasellus tellus libero, elementum vel nibh eget, rutrum.  
                 </p>
@@ -79,13 +83,16 @@
       
         <div class = "faca-parte">
             <div class = "container">
-                <h2> Faça parte do time</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu, ac lacinia lorem pellentesque id. Morbi tincidunt malesuada vestibulum. Praesent at diam eros. Integer tempus vitae urna et rhoncus. Proin congue turpis ac felis tincidunt congue. Duis tincidunt dui eu malesuada convallis. In vel est feugiat, interdum ante iaculis, ultricies turpis. 
-                </p>
+                
+                <div class="conteudo-faca-parte">
+                    <h2> Faça parte do time</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu, ac lacinia lorem pellentesque id. Morbi tincidunt malesuada vestibulum. Praesent at diam eros. Integer tempus vitae urna et rhoncus. Proin congue turpis ac felis tincidunt congue. Duis tincidunt dui eu malesuada convallis. In vel est feugiat, interdum ante iaculis, ultricies turpis. 
+                    </p>
+                </div>
 
-            <div = class="imagem-atleta">
-                <img src="img/atleta.png" alt="">
-            </div>
+                <div = class="imagem-atleta">
+                    <img src="img/atleta.png" alt="">
+                </div>
 
             </div>
         </div>
@@ -104,7 +111,6 @@
                         <h3>Plano Mensal</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu, </p>
                         <span>R$64,90</span> <!--teg de apenas texto.  serve para marcar uma class e depois formatar-->
-                        
                             <ul>
                                 <li> Lorem ipsum dolor Vestibulum ante </li>
                                 <li> sit amet, consecte  ante </li>
@@ -116,12 +122,10 @@
                         <a href="#" class="btn"> Lorem Ipsum </a>
                     </div>
 
-
                     <div class="card-plano card-destaque">
                         <h3>Plano Mensal</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu, </p>
                         <span class="span-destaque">R$64,90</span> <!--teg de apenas texto.  serve para marcar uma class e depois formatar-->
-                        
                             <ul>
                                 <li> Lorem ipsum dolor Vestibulum ante </li>
                                 <li> sit amet, consecte  ante </li>
@@ -132,7 +136,6 @@
 
                         <a href="#" class="btn btn-destaque"> Lorem Ipsum </a>
                     </div>
-
 
                     <div class="card-plano">
                         <h3>Plano Mensal</h3>
@@ -176,7 +179,6 @@
                     <!-- /*tel aqui só serve para celular mudando o teclado para número*/ -->
                     <textarea placeholder="Digite sua mensagem" required></textarea>
                     <button class="btn">Lorem Ipsum</button>
-
                 </form>
 
             </div>
@@ -197,14 +199,27 @@
                 <a href="#" target="_blank"><img src= "img/twitter.svg" alt=""></a>
                 <a href="#" target="_blank"><img src= "img/youtube.svg" alt=""></a>
                 <a href="#" target="_blank"><img src= "img/facebook.svg" alt=""></a>
-
             </div>
-
         </div> 
 
-    </body>
+        <div class = "mc"> 
+            <p>Desenvolvido por @by Marco Cerqueira</p>
+        </div>
+
+        <!-- Animação AOS -->
+        <script src="js/script.js">
+        </script>
+        <!-- Ligação entre HTML e JS -->
+        <script src="js/aos.js">      
+        </script>
+        <!-- Ligação com o aos -->
         
+        <script>
+            AOS.init({
+                offset: 60,
+             });
+        </script>
 
-
+    </body>
 
 </html>
